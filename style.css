@@ -1,6 +1,6 @@
 :root {
     --a: #0a1128;
-    --b: #013a63;
+    --b: #013a63be;
     --c: #2a6f97;
     --d: #89c2d9;
     --f: #e3f0f5;
@@ -18,9 +18,13 @@ body {
     background-color: var(--a);
     color: var(--f);
     text-align: center;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 header {
+    width: 100%;
     background: var(--d);
     color: var(--a);
     padding: 1rem 0;
@@ -57,8 +61,8 @@ header {
     display: grid;
     justify-content: center;
     margin: 30px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10vh 1fr;
+    grid-template-columns: 30vw 30vw;
+    grid-template-rows: 20% 80%;
 }
 
 .ImgWlc {
@@ -79,5 +83,172 @@ header {
 }
 
 .descriptionMsg {
-    background-color: var(--);
+    background-color: var(--b);
+    font-size: x-large;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.presentation_movies, .picks {
+    width: 100%;
+    max-width: 100%;
+}
+
+.picks {
+    display: grid;
+    justify-content: center;
+    margin-top: 40px;
+    grid-template-columns: 80vw;
+    grid-template-rows: 20vh 1fr;
+}
+
+.descriptionMovies {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    background-color: var(--d);
+    color: var(--a);
+    font-size: x-large;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.descriptionMovies h2 {
+    background-color: var(--c);
+    color: var(--f);
+}
+
+.descriptionMovies p {
+    padding: 15px;
+}
+
+.presentation_movies {
+    display: grid;
+    grid-template-columns: repeat( 4, 25% );
+    grid-template-rows: repeat( 3, 30% );
+    gap: 10px;
+}
+
+.presentation_movies img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.presentation_movies h3 {
+    width: 100%;
+    height: 100%;
+    background-color: var(--b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.movie {
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90% 10%;
+}
+
+.movie img {
+    grid-row: 1/3;
+    grid-column: 1;
+}
+
+.movie h3 {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.movie1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.movie2 {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.movie3 {
+    grid-column: 3;
+    grid-row: 1 / 3;
+}
+
+.movie4 {
+    grid-column: 2 / 4;
+    grid-row: 3;
+}
+
+.movie5 {
+    grid-column: 4;
+    grid-row: 2 / 4;
+}
+
+.movie6 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    bottom: 0;
+    font-size: xx-large;
+    background-color: var(--b);
+}
+
+footer a {
+    color: var(--d);
+}
+
+@media (max-width: 768px) {
+  * {
+    font-size: 14px;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .presentation_movies {
+    width: 90%;
+  }
+
+  .presentation_movies h3 {
+    font-size: small;
+  }
+
+  .ImgWlc {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .welcomeMsg {
+    grid-template-rows: 30% 70%;
+  }
+
+  .welcome {
+    background-color: var(--b);
+    color: var(--f);
+  }
+
+  .descriptionMsg {
+    grid-column: 1/3;
+    background-color: var(--d);
+    color: var(--a);
+  }
+
+  .descriptionMovies {
+    height: 125px;
+    margin-bottom: 40px;
+  }
 }
