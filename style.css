@@ -102,10 +102,11 @@ header {
     justify-content: center;
     margin-top: 40px;
     grid-template-columns: 80vw;
-    grid-template-rows: 20vh 1fr;
+    grid-template-rows: 25vh 1fr;
 }
 
 .descriptionMovies {
+    height: 150px;
     margin-top: 40px;
     margin-bottom: 50px;
     background-color: var(--d);
@@ -148,10 +149,18 @@ header {
 }
 
 .movie {
-    border-radius: 5px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 90% 10%;
+}
+
+.movie:hover {
+    grid-template-rows: 80% 20%;
+}
+
+.movie:hover h3 {
+    background-color: var(--f);
+    color: var(--a);
 }
 
 .movie img {
